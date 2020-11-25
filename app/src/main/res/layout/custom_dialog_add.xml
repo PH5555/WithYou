@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="350dp"
+    android:background="@drawable/design_dialog"
+    android:gravity="center"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFEEEE"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/person"/>
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_marginTop="20dp"
+            android:layout_width="200dp"
+            android:layout_height="37dp"
+            android:hint="이름을 입력해 주세요"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:background="@drawable/design_dialog"/>
+
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_marginTop="14dp"
+            android:layout_width="200dp"
+            android:layout_height="37dp"
+            android:hint="번호를 입력해 주세요"
+            android:inputType="phone"
+            android:gravity="center"
+            android:textSize="15sp"
+            android:background="@drawable/design_dialog"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="긴급 연락망에 추가하시겠습니까?"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#828282"/>
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancle"
+                android:text="취소"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:background="@drawable/design_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp" />
+
+            <Button
+                android:id="@+id/btn_ok"
+                android:layout_marginLeft="10dp"
+                android:text="확인"
+                android:textColor="#ffff"
+                android:textStyle="bold"
+                android:background="@drawable/design_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="37dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

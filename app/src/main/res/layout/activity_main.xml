@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dong.with_you.HomeComeActivity">
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="136dp"
+            android:layout_height="33dp"
+            android:src="@drawable/title"/>
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/telephone"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/telephone" />
+
+    </RelativeLayout>
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout
+        android:id="@+id/pannel"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        app:umanoDragView="@id/dragview"
+        app:umanoScrollableView="@id/content"
+        app:umanoPanelHeight="120dp"
+        app:umanoOverlay="false"
+        app:umanoParallaxOffset="10dp"
+        app:umanoShadowHeight="4dp">
+
+        <fragment
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/map"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/dragview"
+            android:clickable="true"
+            android:focusable="false"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:gravity="center"
+                android:id="@+id/second"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:visibility="visible"
+                    android:id="@+id/showAdress2"
+                    android:layout_width="320dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/design_address">
+
+                    <TextView
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/txt_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="18dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/txt_address2"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_back"
+                        android:layout_width="100dp"
+                        android:layout_height="47dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/design_button2"
+                        android:text="이전"
+                        android:textStyle="bold"
+                        android:textColor="#ffffff"/>
+
+                    <Button
+                        android:id="@+id/btn_on"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold"
+                        android:layout_width="210dp"
+                        android:layout_height="47dp"
+                        android:background="@drawable/design_button3"
+                        android:text="안전 귀가 ON"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="visible"
+                android:id="@+id/first"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="120dp">
+
+                <LinearLayout
+                    android:layout_marginTop="23dp"
+                    android:layout_marginLeft="17dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginRight="13dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/gray_dot"/>
+
+                    <TextView
+                        android:id="@+id/txt_current"
+                        android:textColor="#000000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="현재 위치 : 우리집"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_gravity="center"
+                    android:layout_width="330dp"
+                    android:layout_height="2dp"
+                    android:background="#BDBDBD">
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_marginRight="13dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pink_dot"/>
+
+                    <TextView
+                        android:id="@+id/txt_destination"
+                        android:textColor="#BDBDBD"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="도착 위치를 설정해 주세요" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                >
+
+                <RelativeLayout
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:textSize="16sp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/design_button"
+                        android:id="@+id/edt_address"
+                        android:layout_width="320dp"
+                        android:layout_height="45dp"
+                        android:paddingLeft="12dp"
+                        android:hint="주소를 입력해주세요"
+                        android:textColorHint="#BDBDBD"/>
+
+                    <ImageView
+                        android:clickable="true"
+                        android:id="@+id/click"
+                        android:layout_marginLeft="280dp"
+                        android:layout_marginTop="49dp"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/search"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:clickable="true"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:id="@+id/showAdress"
+                    android:layout_marginTop="40dp"
+                    android:layout_width="320dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/design_address">
+
+                    <TextView
+                        android:layout_marginTop="18dp"
+                        android:layout_marginLeft="18dp"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:id="@+id/txt_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_marginLeft="18dp"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000000"
+                        android:id="@+id/txt_address"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/txt_help"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="40dp"
+                    android:orientation="vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="주소 검색"
+                            android:textColor="#000000"/>
+                        <TextView
+                            android:layout_marginLeft="3dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="TIP"
+                            android:textColor="#F25F5F"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_marginTop="10dp"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="도로명, 건물번호, 지번 주소 중"
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:textSize="18sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="하나를 선택해 검색해 주세요."
+                        android:textColor="#000000"
+                        android:textStyle="bold"/>
+
+                    <TextView
+                        android:layout_marginTop="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="건물 명칭 (ex 서울 코엑스)"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="도로명 + 건물번호 (ex 삼성로 77)"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:layout_marginTop="3dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="동/읍/면/리/가 + 번지 (ex 명암리 599-1)"
+                        android:textColor="#000000"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </com.sothree.slidinguppanel.SlidingUpPanelLayout>
+
+</LinearLayout>

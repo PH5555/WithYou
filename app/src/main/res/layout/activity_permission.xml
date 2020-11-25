@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    tools:context="com.dong.with_you.PermissionActivity">
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="136dp"
+            android:layout_height="33dp"
+            android:src="@drawable/title"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="권한 설정 안내"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="폰을 안전하게 지키기 위해서는 다음의 접근"
+        android:textColor="#646464"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
+    <TextView
+        android:layout_marginTop="2dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="권한을 허용해 주셔야 합니다."
+        android:textColor="#646464"
+        android:textStyle="bold"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:paddingLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="필수적 접근 권한"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:textSize="18sp"/>
+
+    <LinearLayout
+        android:gravity="center|left"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginRight="7dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/sms"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SMS"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="입력한 번호로 자신의 위치를 공유합니다."
+                android:textColor="#646464"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:gravity="center|left"
+        android:layout_marginTop="20dp"
+        android:paddingLeft="30dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_marginRight="7dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/map"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GPS"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_marginTop="2dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="안전 귀가를 시작하면 실시간으로 위치정보를 수집합니다."
+                android:textColor="#646464"
+                android:textStyle="bold"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_admit"
+        android:layout_marginTop="100dp"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:text="SMS 권한 허용"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:background="@drawable/design_button3"
+        />
+
+
+</LinearLayout>

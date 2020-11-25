@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="#F5B3AF"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.dong.with_you.ContactActivity">
+
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:elevation="5dp"
+        android:gravity="center|left"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:layout_width="136dp"
+            android:layout_height="33dp"
+            android:src="@drawable/title"/>
+
+        <ImageView
+            android:clickable="true"
+            android:id="@+id/home"
+            android:layout_marginRight="7dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/home" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_marginTop="20dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/person"/>
+
+    <LinearLayout
+        android:layout_marginLeft="2dp"
+        android:gravity="center"
+        android:layout_marginBottom="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="130dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:hint="이름을 입력하세요!"
+            android:background="@null"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <ImageView
+            android:id="@+id/btn_change"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:src="@drawable/pencil"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:elevation="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/design_load">
+
+        <TextView
+            android:id="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#707070"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="비상 연락망"
+            android:layout_marginBottom="20dp">
+
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="350dp"
+            android:layout_below="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_height="180dp"
+            android:id="@+id/recyclerview">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:layout_marginBottom="10dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:id="@+id/btn_add"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/plus"/>
+
+   </RelativeLayout>
+</LinearLayout>
